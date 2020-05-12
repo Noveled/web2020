@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>Map API Test</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    
+    <style>
+        /* Always set the map height explicitly to define the size of the div
+         * element that contains the map. */
+        #map {
+          height: 400px;
+          weight: 100%;
+        }
+        /* Optional: Makes the sample page fill the window. */
+        html, body {
+          height: 100%;
+          margin: 0;
+          padding: 0;
+        }
+      </style>
+  
+  </head>
+
+  <body>
+    <div id="map"></div>
+    <script>
+        var map;
+        // Initialize and add the map
+        function initMap() {
+        // The location of Uluru
+        var uluru = {lat: 36.354679, lng: 127.421112};
+        // The map, centered at Uluru
+        var map = new google.maps.Map(
+            document.getElementById('map'), {zoom: 17, center: uluru});
+        // The marker, positioned at Uluru
+        var marker = new google.maps.Marker({position: uluru, map: map});
+        }
+
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIlUw0WdL_c2ZiTAxTUC0ET0v__yM8uTo&callback=initMap"
+      async defer></script>
+  
+
+
+    
+    <!--- --><!--- --><!--- --><!--- --><!--- -->
+    <strong>길찾기</strong>
+    <hr>
+    <button>대중교통</button>
+    <button>도보</button>
+    <button>계단 제외</button>
+    
+    <div class = "input_box">
+        <label class="input_label" for="directionStart">출발지를 입력하거나 지도를 터치하세요</label><input type="text" id="directionStart" value="한남대학교">
+    </div>
+    <div class = "output_box">
+        <label class="output_label" for="directionStart">도착지를 입력하거나 지도를 터치하세요</label><input type="text" id="directionEnd" value="오문창">
+    </div>
+
+    <button>다시 입력</button>
+    <button>출발지 도착지 전환</button>
+    <button>경로 검색</button>
+
+
+    <!--- --><!--- --><!--- --><!--- --><!--- -->
+    <div class = "title_box">
+        <strong>자주가는 장소</strong>
+        <hr>
+    </div>
+
+    <li class="item_place">
+        <button _ngcontent-wyt-c230="" class="link_place">
+            <input type="text" id="setHome" value="한남대학교 (구)기숙사">
+            <span _ngcontent-wyt-c230="" class="icon_box icon_box home"></span>
+            <span _ngcontent-wyt-c230="" class="place_text">집 등록</span>
+        </button>
+    </li>
+    <li _ngcontent-wyt-c230="" class="item_place ng-star-inserted">
+        <button _ngcontent-wyt-c230="" class="link_place">
+            <input type="text" id="setComp" value="한남대학교 디자인팩토리">
+            <span _ngcontent-wyt-c230="" class="icon_box icon_box office"></span>
+            <span _ngcontent-wyt-c230="" class="place_text">회사/학교 등록</span>
+        </button>
+    </li>
+
+    <!--- --><!--- --><!--- --><!--- --><!--- -->
+    <strong>최근 검색</strong>
+    <hr>
+    <span _ngcontent-wyt-c117="" class="place_text ng-star-inserted">한남대학교 디자인팩토리(1층, 회의실)<br></span>
+
+    <!--- --><!--- --><!--- --><!--- --><!--- -->
+    <strong>즐겨찾기</strong>
+    <hr>
+    <span _ngcontent-wyt-c117="" class="place_text ng-star-inserted">한남대학교 메이커스페이스(1층, 대강당)</span>
+    
+  </body>
+</html>
+
+
+<!--- https://developers.google.com/maps/documentation/javascript/get-api-key?authuser=1  -->
+<!--- https://developers.google.com/maps/documentation/javascript/groundoverlays?hl=ko -->
+<!--- https://console.cloud.google.com/apis/credentials?authuser=1&project=phrasal-pad-277006&supportedpurview=project -->
+<!--- https://observablehq.com/@kyagrd/08?collection=@kyagrd/webcourse -->
