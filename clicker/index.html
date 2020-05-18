@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <title>SiiNa Project 01</title>
+
+    <style>
+        #game {
+          height: 640px;
+          weight: 100%;
+          background-color: coral;
+        }
+        #tet_Board {
+          height: 840px;
+          weight: 100%;
+          background-color: cornflowerblue;
+
+          text-align: center;
+        }
+        #gacha_Board {
+          height: 640px;
+          weight: 100%;
+          background-color:pink;
+        }
+        /* Optional: Makes the sample page fill the window. */
+        
+        table {
+            border-collapse: collapse;
+        }
+
+        td {
+            border: 0px solid black;
+            width: 40px;
+            height: 40px;
+        }
+      </style>
+
+
+    <script src = "js/goldManager.js"></script>
+    <script src = "js/tetManager.js"></script>
+
+  </head>
+  <body>
+      <img src="./images/츤-프사-(4).jpg" alt = "Profile_IMG" width="20%" height="20%">
+      <h1>SiiNa a.k.a noveled</h1>
+      <h6>Optimism, freedom or irregular</h6>
+      <p>직접그린 캐릭터와 배경 원화들</p>
+
+
+      <div id = "game">
+        <h3> 게임 영역~ </h3>
+        <p id = "pgold"> gold : 0 </p>
+        <p id = "goldLev"> goldLev : 1 </p>
+        <p id = "autoLev"> autoLev : 0 </p>
+
+        <button id = "getGold"> getGold </button>
+        <button id = "upGold"> upGold </button>
+        <button id = "autoGold"> autoGold </button>
+        <script>
+            game.querySelector("#getGold").addEventListener("click", addGold);
+            game.querySelector("#upGold").addEventListener("click", upGold);
+            game.querySelector("#autoGold").addEventListener("click", upAuto);
+            autoGold();
+        </script>
+      </div>
+
+
+      <div id = "tet_Board">
+        <h3> 테트 보드 </h3>
+        <div id = "tet">
+
+        </div>
+        <script>
+            makeBoard();
+        </script>
+      </div>
+
+
+      <div id = "gacha_Board">
+        <h3> 갓챠가 가챠 </h3>
+
+      </div>
+      
+  </body>
+</html>
